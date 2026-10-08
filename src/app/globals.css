@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+    --background: #f5f3ed;
+    --foreground: #171614;
+    --line: rgba(30, 30, 30, 0.12);
+    --muted: #68645d;
+
+    --yellow: #f5c94a;
+    --pink: #ff4f87;
+    --green: #9bdcc5;
+    --blue: #3e5ee8;
+    --orange: #ff7043;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background-color: #f4f1e8;
+
+    background-image:
+    /* subtle paper fibers */
+        repeating-linear-gradient(
+            0deg,
+            rgba(80, 70, 50, 0.025) 0px,
+            rgba(80, 70, 50, 0.025) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        /* notebook horizontal lines */
+        repeating-linear-gradient(
+                to bottom,
+                transparent 0px,
+                transparent 31px,
+                rgba(65, 75, 90, 0.1) 32px,
+                transparent 33px
+            ),
+        /* very subtle warm paper variation */
+        radial-gradient(
+                ellipse at 20% 10%,
+                rgba(255, 255, 255, 0.75),
+                transparent 45%
+            ),
+        radial-gradient(
+            ellipse at 80% 80%,
+            rgba(190, 175, 145, 0.1),
+            transparent 50%
+        );
+
+    color: var(--foreground);
+
+    font-family: var(--font-sans), sans-serif;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    opacity: 0.11;
+
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+
+    background-repeat: repeat;
+
+    background-size: 180px 180px;
+
+    mix-blend-mode: multiply;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    opacity: 0.06;
+
+    z-index: 9998;
+
+    pointer-events: none;
+
+    background: radial-gradient(
+        ellipse at center,
+        transparent 55%,
+        rgba(70, 60, 45, 0.06) 100%
+    );
+
+    mix-blend-mode: multiply;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================
+   PORTFOLIO / PAPER SYSTEM
+========================================= */
+
+::selection {
+    background: var(--yellow);
+    color: var(--foreground);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Better image rendering */
+img {
+    max-width: 100%;
+}
+
+/* Remove default focus weirdness,
+   keep keyboard accessibility */
+:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 4px;
+}
+
+/* Slightly rougher paper feeling */
+.paper-shadow {
+    box-shadow: 6px 6px 0 var(--foreground);
+}
+
+.paper-shadow-sm {
+    box-shadow: 3px 3px 0 var(--foreground);
+}
