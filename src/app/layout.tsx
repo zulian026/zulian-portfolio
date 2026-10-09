@@ -29,7 +29,7 @@ const handwritten = Caveat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zyandev.my.id"),
+  metadataBase: new URL("https://www.zyandev.my.id"),
 
   verification: {
     google: "G1br3_uP32MVvqWwcDTJEfHIU4xExKa3tmVsb0odVYU",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://zyandev.my.id",
+    url: "https://www.zyandev.my.id",
     siteName: "ZULIAN",
     title: "ZULIAN — Creative Developer",
     description:
