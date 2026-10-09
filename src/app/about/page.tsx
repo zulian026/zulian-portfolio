@@ -207,7 +207,7 @@ export default function AboutPage() {
                 "
               >
                 <Image
-                  src="/images//profile.jpg"
+                  src="/images/profile/profile.jpg"
                   alt="Zulian"
                   fill
                   sizes="(max-width: 1024px) 90vw, 420px"

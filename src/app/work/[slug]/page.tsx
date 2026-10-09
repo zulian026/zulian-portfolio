@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Check, ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 
 import { projects, siteConfig } from "@/data/site";
+import TransitionLink from "@/components/animations/TransitionLink";
 
 const accentClasses = {
   yellow: {
@@ -69,7 +69,7 @@ export default async function CaseStudyPage({
 
       <section className="px-5 pb-20 pt-10 sm:px-8 sm:pb-28 sm:pt-14 lg:px-12 lg:pb-32 lg:pt-16">
         <div className="mx-auto max-w-[1400px]">
-          <Link
+          <TransitionLink
             href="/work"
             className="
               group
@@ -85,7 +85,7 @@ export default async function CaseStudyPage({
           >
             <ArrowLeft size={18} strokeWidth={1.7} />
             back to work
-          </Link>
+          </TransitionLink>
 
           <div className="mt-20 sm:mt-28">
             <div className="flex flex-wrap items-center gap-3">
@@ -534,7 +534,7 @@ export default async function CaseStudyPage({
             NEXT PROJECT
           </span>
 
-          <Link
+          <TransitionLink
             href={`/work/${nextProject.slug}`}
             className="group mt-7 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"
           >
@@ -564,9 +564,14 @@ export default async function CaseStudyPage({
             <ArrowUpRight
               size={42}
               strokeWidth={1.3}
-              className="transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2"
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-2
+                group-hover:-translate-y-2
+              "
             />
-          </Link>
+          </TransitionLink>
         </div>
       </section>
     </main>

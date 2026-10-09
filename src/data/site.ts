@@ -11,7 +11,7 @@ export const siteConfig = {
   availability: "AVAILABLE FOR NEW PROJECTS",
 
   socials: {
-    github: "#",
+    github: "https://github.com/zulian026",
     linkedin: "#",
     instagram: "#",
     dribbble: "#",

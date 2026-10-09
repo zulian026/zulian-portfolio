@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowUpRight, Heart } from "lucide-react";
 import {
   FaDribbble,
@@ -6,6 +5,9 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+
+import { siteConfig } from "@/data/site";
+import TransitionLink from "@/components/animations/TransitionLink";
 
 const footerLinks = [
   {
@@ -63,7 +65,7 @@ export default function Footer() {
           {/* BRAND */}
 
           <div>
-            <Link
+            <TransitionLink
               href="/"
               className="
                 group
@@ -106,7 +108,7 @@ export default function Footer() {
               >
                 ZULIAN
               </span>
-            </Link>
+            </TransitionLink>
 
             <p
               className="
@@ -141,7 +143,7 @@ export default function Footer() {
 
             <div className="grid grid-cols-2 gap-x-10 gap-y-2">
               {footerLinks.map((link) => (
-                <Link
+                <TransitionLink
                   key={link.href}
                   href={link.href}
                   className="
@@ -170,7 +172,7 @@ export default function Footer() {
                       group-hover:opacity-100
                     "
                   />
-                </Link>
+                </TransitionLink>
               ))}
             </div>
           </div>
@@ -192,8 +194,12 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-2">
+              {/* GitHub */}
+
               <a
-                href="#"
+                href={siteConfig.socials.github}
+                target="_blank"
+                rel="noreferrer"
                 aria-label="GitHub"
                 className="
                   flex
@@ -215,8 +221,12 @@ export default function Footer() {
                 <FaGithub size={14} />
               </a>
 
+              {/* LinkedIn */}
+
               <a
-                href="#"
+                href={siteConfig.socials.linkedin}
+                target="_blank"
+                rel="noreferrer"
                 aria-label="LinkedIn"
                 className="
                   flex
@@ -237,8 +247,12 @@ export default function Footer() {
                 <FaLinkedinIn size={14} />
               </a>
 
+              {/* Instagram */}
+
               <a
-                href="#"
+                href={siteConfig.socials.instagram}
+                target="_blank"
+                rel="noreferrer"
                 aria-label="Instagram"
                 className="
                   flex
@@ -259,8 +273,12 @@ export default function Footer() {
                 <FaInstagram size={14} />
               </a>
 
+              {/* Dribbble */}
+
               <a
-                href="#"
+                href={siteConfig.socials.dribbble}
+                target="_blank"
+                rel="noreferrer"
                 aria-label="Dribbble"
                 className="
                   flex

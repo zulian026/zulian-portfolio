@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 
 import { projects } from "@/data/site";
+import TransitionLink from "@/components/animations/TransitionLink";
 
 const accentClasses = {
   yellow: "bg-[var(--yellow)]",
@@ -31,7 +31,7 @@ export default function WorkPage() {
         "
       >
         <div className="mx-auto max-w-[1400px]">
-          <Link
+          <TransitionLink
             href="/"
             className="
               mb-12
@@ -49,7 +49,7 @@ export default function WorkPage() {
           >
             <ArrowDownRight size={15} />
             BACK HOME
-          </Link>
+          </TransitionLink>
 
           <div className="relative">
             <span
@@ -173,7 +173,7 @@ export default function WorkPage() {
                     "
                   >
                     {/* Visual */}
-                    <Link
+                    <TransitionLink
                       href={`/work/${project.slug}`}
                       className="group block"
                     >
@@ -192,7 +192,7 @@ export default function WorkPage() {
                           group-hover:shadow-[11px_11px_0_var(--foreground)]
                         "
                       >
-                        {/* grid */}
+                        {/* Grid */}
                         <div
                           className="
                             absolute
@@ -203,7 +203,7 @@ export default function WorkPage() {
                           "
                         />
 
-                        {/* accent shape */}
+                        {/* Accent shape */}
                         <div
                           className={`
                             absolute
@@ -222,7 +222,7 @@ export default function WorkPage() {
                           `}
                         />
 
-                        {/* project number */}
+                        {/* Project number */}
                         <span
                           className="
                             absolute
@@ -241,7 +241,7 @@ export default function WorkPage() {
                           {project.number}
                         </span>
 
-                        {/* title */}
+                        {/* Title */}
                         <div
                           className="
                             absolute
@@ -283,7 +283,7 @@ export default function WorkPage() {
                           </h2>
                         </div>
 
-                        {/* arrow */}
+                        {/* Arrow */}
                         <div
                           className="
                             absolute
@@ -310,7 +310,7 @@ export default function WorkPage() {
                           <ArrowUpRight size={24} />
                         </div>
                       </div>
-                    </Link>
+                    </TransitionLink>
 
                     {/* Details */}
                     <div
@@ -347,7 +347,7 @@ export default function WorkPage() {
                       </div>
 
                       <div className="mt-10">
-                        <Link
+                        <TransitionLink
                           href={`/work/${project.slug}`}
                           className="
                             group
@@ -381,12 +381,12 @@ export default function WorkPage() {
                               group-hover:-translate-y-1
                             "
                           />
-                        </Link>
+                        </TransitionLink>
                       </div>
                     </div>
                   </div>
 
-                  {/* handwritten side note */}
+                  {/* Handwritten side note */}
                   <div
                     className="
                       mt-8
@@ -449,7 +449,7 @@ export default function WorkPage() {
             for now :)
           </div>
 
-          <Link
+          <TransitionLink
             href="/contact"
             className="
               group
@@ -482,7 +482,7 @@ export default function WorkPage() {
                 group-hover:-translate-y-1
               "
             />
-          </Link>
+          </TransitionLink>
         </div>
       </section>
     </main>
