@@ -31,6 +31,10 @@ const handwritten = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://zyandev.my.id"),
 
+  verification: {
+    google: "G1br3_uP32MVvqWwcDTJEfHIU4xExKa3tmVsb0odVYU",
+  },
+
   title: {
     default: "ZULIAN — Creative Developer",
     template: "%s — ZULIAN",
