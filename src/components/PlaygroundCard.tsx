@@ -8,6 +8,7 @@ import ColorStudy from "@/components/playground/ColorStudy";
 import CustomCursor from "@/components/playground/CustomCursor";
 import PaperUI from "@/components/playground/PaperUI";
 import LoadingThing from "@/components/playground/LoadingThing";
+import SpinDial from "@/components/playground/SpinDial";
 import type { PlaygroundItem } from "@/data/playground";
 
 type PlaygroundCardProps = {
@@ -142,6 +143,8 @@ export default function PlaygroundCard({ item, index }: PlaygroundCardProps) {
             <PaperUI />
           ) : item.title === "LOADING THING" ? (
             <LoadingThing />
+          ) : item.title === "SPIN DIAL" ? (
+            <SpinDial />
           ) : (
             <div
               className={`

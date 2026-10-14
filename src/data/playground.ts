@@ -69,4 +69,14 @@ export const playgroundItems: PlaygroundItem[] = [
     accent: "pink",
     type: "animation",
   },
+  {
+    number: "07",
+    title: "SPIN DIAL",
+    description:
+      "A tactile little dial that spins with elastic physics. Click it and watch the degrees land somewhere unexpected.",
+    category: "INTERACTION",
+    year: "2026",
+    accent: "blue",
+    type: "experiment",
+  },
 ];
