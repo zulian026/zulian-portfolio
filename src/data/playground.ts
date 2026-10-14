@@ -79,4 +79,14 @@ export const playgroundItems: PlaygroundItem[] = [
     accent: "blue",
     type: "experiment",
   },
+  {
+    number: "08",
+    title: "TILT CARD",
+    description:
+      "A card that leans into your cursor with a soft glare and a face popping out in 3D. Pure CSS perspective, no physics engine.",
+    category: "INTERACTION",
+    year: "2026",
+    accent: "green",
+    type: "ui",
+  },
 ];

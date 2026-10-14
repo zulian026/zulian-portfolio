@@ -9,6 +9,7 @@ import CustomCursor from "@/components/playground/CustomCursor";
 import PaperUI from "@/components/playground/PaperUI";
 import LoadingThing from "@/components/playground/LoadingThing";
 import SpinDial from "@/components/playground/SpinDial";
+import TiltCard from "@/components/playground/TiltCard";
 import type { PlaygroundItem } from "@/data/playground";
 
 type PlaygroundCardProps = {
@@ -145,6 +146,8 @@ export default function PlaygroundCard({ item, index }: PlaygroundCardProps) {
             <LoadingThing />
           ) : item.title === "SPIN DIAL" ? (
             <SpinDial />
+          ) : item.title === "TILT CARD" ? (
+            <TiltCard />
           ) : (
             <div
               className={`
